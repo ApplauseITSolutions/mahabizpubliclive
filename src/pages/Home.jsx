@@ -148,7 +148,7 @@ export const Home = () => {
                 to="/apply/become-member"
                 className="w-full sm:w-auto px-4 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-primary to-primary-light hover:from-secondary hover:to-secondary-light transition-all shadow-md sm:shadow-lg shadow-primary/20 hover:shadow-secondary/25 hover:scale-[1.03] transform text-center whitespace-nowrap"
               >
-                Join MahaBiz..!
+                Join MahaBiz
               </Link>
               <Link
                 to="/apply/get-featured"
