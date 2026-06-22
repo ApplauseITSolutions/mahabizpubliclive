@@ -83,43 +83,45 @@ export const Contact = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
         
         {/* Left column: Contact Info & Map */}
-        <div className="lg:col-span-5 space-y-8">
+        <div className="lg:col-span-5 flex flex-col justify-between h-full gap-8">
           
           {/* Quick info */}
-          <div className="p-8 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 space-y-6">
-            <h3 className="text-xl font-bold font-sora text-slate-950 dark:text-white">Quick Contact Info</h3>
-            
-            <div className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg"><Phone size={18} /></div>
-                <div>
-                  <p className="text-sm uppercase font-bold text-slate-400">Call Support Desk</p>
-                  <p className="font-semibold text-slate-850 dark:text-slate-250">+91 22 4590 1200</p>
+          <div className="p-8 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-bold font-sora text-slate-950 dark:text-white mb-6">Quick Contact Info</h3>
+              
+              <div className="space-y-5 text-sm text-slate-600 dark:text-slate-400">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg"><Phone size={18} /></div>
+                  <div>
+                    <p className="text-sm uppercase font-bold text-slate-400">Call Support Desk</p>
+                    <p className="font-semibold text-slate-850 dark:text-slate-250">+91 22 4590 1200</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg"><Mail size={18} /></div>
-                <div>
-                  <p className="text-sm uppercase font-bold text-slate-400">Email Inquiry Desk</p>
-                  <p className="font-semibold text-slate-850 dark:text-slate-250">support@mahabizconnect.in</p>
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg"><Mail size={18} /></div>
+                  <div>
+                    <p className="text-sm uppercase font-bold text-slate-400">Email Inquiry Desk</p>
+                    <p className="font-semibold text-slate-850 dark:text-slate-250">support@mahabizconnect.in</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-start gap-3">
-                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg mt-0.5"><MapPin size={18} /></div>
-                <div>
-                  <p className="text-sm uppercase font-bold text-slate-400">Registered Chambers Office</p>
-                  <p className="font-semibold text-slate-850 dark:text-slate-250">MahaBiz Chambers, Senapati Bapat Road, Shivajinagar, Pune, MH 411016</p>
+                <div className="flex items-start gap-3">
+                  <div className="p-2.5 bg-slate-100 dark:bg-slate-800 text-secondary rounded-lg mt-0.5"><MapPin size={18} /></div>
+                  <div>
+                    <p className="text-sm uppercase font-bold text-slate-400">Registered Chambers Office</p>
+                    <p className="font-semibold text-slate-850 dark:text-slate-250">MahaBiz Chambers, Senapati Bapat Road, Shivajinagar, Pune, MH 411016</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Social handles */}
-            <div className="pt-6 border-t border-slate-150 dark:border-slate-800/80">
+            <div className="pt-6 border-t border-slate-150 dark:border-slate-800/80 mt-8">
               <p className="text-sm uppercase font-bold text-slate-400 mb-3 text-center lg:text-left">Connect with our Social channels</p>
               <div className="flex gap-4 justify-center lg:justify-start text-slate-500 dark:text-slate-400">
                 <a href="#" className="hover:text-secondary transition-colors"><FacebookIcon /></a>
@@ -148,22 +150,11 @@ export const Contact = () => {
             </a>
           </div>
 
-          {/* Google Map mock */}
-          <div className="p-4 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 space-y-4">
-            <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Office Map Location</h4>
-            <div className="aspect-video w-full rounded-2xl bg-gradient-to-tr from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-850 border border-slate-250 dark:border-slate-800 flex flex-col items-center justify-center text-center p-6 text-slate-400 relative overflow-hidden">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-16 w-16 bg-secondary/15 rounded-full blur-xl animate-ping" />
-              <MapPin size={32} className="text-secondary mb-2 z-10" />
-              <span className="text-sm font-bold text-slate-800 dark:text-slate-200 z-10">Google Map Location Placeholder</span>
-              <span className="text-sm text-slate-500 z-10">Senapati Bapat Road, Pune, Maharashtra 411016</span>
-            </div>
-          </div>
-
         </div>
 
         {/* Right column: Form */}
-        <div className="lg:col-span-7 p-8 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 space-y-6">
-          <div className="space-y-2">
+        <div className="lg:col-span-7 p-8 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 flex flex-col h-full space-y-6">
+          <div className="space-y-2 shrink-0">
             <h3 className="text-xl font-bold font-sora text-slate-950 dark:text-white">Submit an Enquiry</h3>
             <p className="text-sm text-slate-550">Fill in the detailed form. Our team responds within 2 business hours.</p>
           </div>
@@ -252,6 +243,17 @@ export const Contact = () => {
 
         </div>
 
+      </div>
+
+      {/* Full Width Google Map mock */}
+      <div className="p-4 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 w-full mt-12">
+        <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Office Map Location</h4>
+        <div className="w-full h-[350px] rounded-2xl bg-gradient-to-tr from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-850 border border-slate-250 dark:border-slate-800 flex flex-col items-center justify-center text-center p-6 text-slate-400 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-16 w-16 bg-secondary/15 rounded-full blur-xl animate-ping" />
+          <MapPin size={32} className="text-secondary mb-2 z-10" />
+          <span className="text-sm font-bold text-slate-800 dark:text-slate-200 z-10">Google Map Location Placeholder</span>
+          <span className="text-sm text-slate-500 z-10">Senapati Bapat Road, Pune, Maharashtra 411016</span>
+        </div>
       </div>
 
     </div>

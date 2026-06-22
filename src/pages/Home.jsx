@@ -119,7 +119,7 @@ export const Home = () => {
     <div className="space-y-12 sm:space-y-24 pb-12 sm:pb-20">
 
       {/* 1. HERO SECTION */}
-      <section className="relative z-[1] min-h-[75vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-10 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/95 dark:bg-slate-950/95">
+      <section className="relative z-[1] min-h-[65vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden pt-4 pb-10 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-white/95 dark:bg-slate-950/95">
         {/* Constellation Network Background */}
         <ConstellationCanvas />
 
@@ -210,7 +210,7 @@ export const Home = () => {
           ].map((service, index) => (
             <div
               key={index}
-              className="p-6 md:p-8 rounded-2xl glass-card border border-slate-200/50 dark:border-slate-800/40 relative overflow-hidden group flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 text-left"
+              className="p-6 pb-4 md:p-8 md:pb-5 rounded-2xl glass-card border border-slate-200/50 dark:border-slate-800/40 relative overflow-hidden group flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 text-left"
             >
               {/* Visual Accent top border bar */}
               <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary/40 via-secondary to-accent/40 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -223,7 +223,7 @@ export const Home = () => {
                 <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-outfit">{service.desc}</p>
               </div>
 
-              <Link to="/services" className="inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:text-secondary-dark mt-6 group/link">
+              <Link to="/services" className="inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:text-secondary-dark mt-4 group/link">
                 Learn More <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -232,7 +232,7 @@ export const Home = () => {
       </section>
 
       {/* 4. WHY JOIN MAHABIZ CONNECT */}
-      <section className="bg-slate-100/40 dark:bg-slate-900/30 py-16 border-y border-slate-200/50 dark:border-slate-800/40">
+      <section className="!mt-2 sm:!mt-4 bg-slate-100/40 dark:bg-slate-900/30 pt-4 pb-8 sm:pt-8 sm:pb-10 border-y border-slate-200/50 dark:border-slate-800/40">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -280,7 +280,7 @@ export const Home = () => {
       </section>
 
       {/* 5. FEATURED BUSINESSES */}
-      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-12">
+      <section className="!mt-2 sm:!mt-4 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-12">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-3">
             <h2 className="text-base uppercase tracking-widest text-secondary font-bold">Featured Listings</h2>
@@ -315,61 +315,65 @@ export const Home = () => {
           {featuredBusinesses.map((biz) => (
             <div
               key={biz.id}
-              className="w-full sm:w-[320px] shrink-0 snap-start p-6 rounded-2xl glass-card border border-slate-200/50 dark:border-slate-800/40 relative overflow-hidden group flex flex-col justify-between h-[380px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 text-left"
+              className="w-full sm:w-[320px] shrink-0 snap-start rounded-2xl glass-card border border-slate-200/50 dark:border-slate-800/40 relative overflow-hidden group flex flex-col h-[400px] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 text-left bg-white/60 dark:bg-slate-900/60"
             >
-              {/* Subtle top indicator bar */}
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div>
-                {/* Logo and Header details */}
-                <div className="flex gap-4 items-center mb-5">
-                  <div className="w-14 h-14 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/40 flex items-center justify-center text-primary dark:text-blue-300 font-black text-xl shadow-sm shrink-0">
-                    {biz.name.charAt(0)}
-                  </div>
-                  <div className="text-left">
-                    <span className="text-[10px] font-extrabold uppercase bg-secondary/10 dark:bg-secondary/20 text-secondary dark:text-secondary-light px-2.5 py-1 rounded-md border border-secondary/20 block w-fit mb-1">
-                      {biz.category}
-                    </span>
-                    <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block">
-                      📍 {biz.city}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Rating and Reviews */}
-                <div className="flex items-center gap-1 text-amber-500 mb-3">
-                  <Star size={13} className="fill-amber-500 stroke-none" />
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">{biz.rating}</span>
-                  <span className="text-xs text-slate-400 dark:text-slate-500">({biz.reviewsCount} reviews)</span>
-                </div>
-
-                {/* Business Name */}
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-sora leading-tight group-hover:text-secondary transition-colors line-clamp-1">
-                  {biz.name}
-                </h4>
-
-                {/* Business Description */}
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-outfit line-clamp-3">
-                  {biz.description}
-                </p>
+              {/* Cover Image */}
+              <div className="w-full h-40 relative overflow-hidden shrink-0">
+                <div className={`absolute inset-0 bg-gradient-to-tr ${biz.logoColor || 'from-slate-400 to-slate-600'} opacity-40 z-10 mix-blend-multiply`} />
+                <img 
+                  src={`https://picsum.photos/seed/${biz.id}/400/300`} 
+                  alt={biz.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                {/* Category Badge */}
+                <span className="absolute top-4 right-4 z-20 text-[10px] font-extrabold uppercase bg-white/95 dark:bg-slate-900/95 text-secondary dark:text-secondary-light px-2.5 py-1 rounded-md shadow-sm">
+                  {biz.category}
+                </span>
               </div>
 
-              <div>
-                {/* Footer details: Industry and partner status */}
-                <div className="border-t border-slate-100 dark:border-slate-800/60 pt-4 mb-4 flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
-                  <span className="line-clamp-1 max-w-[170px]">{biz.industry}</span>
-                  <span className="text-primary dark:text-blue-300 font-extrabold text-[9px] bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded">
-                    Partner
-                  </span>
+              {/* Content Container */}
+              <div className="p-5 flex flex-col flex-grow justify-between">
+                <div>
+                  <div className="flex justify-between items-start mb-2">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
+                      📍 {biz.city}
+                    </span>
+                    <div className="flex items-center gap-1 text-amber-500">
+                      <Star size={13} className="fill-amber-500 stroke-none" />
+                      <span className="text-xs font-bold text-slate-700 dark:text-slate-300">{biz.rating}</span>
+                      <span className="text-[10px] text-slate-400 dark:text-slate-500 ml-0.5">({biz.reviewsCount})</span>
+                    </div>
+                  </div>
+
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 font-sora leading-tight group-hover:text-secondary transition-colors line-clamp-1">
+                    {biz.name}
+                  </h4>
+                  
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-outfit line-clamp-2">
+                    {biz.description}
+                  </p>
                 </div>
 
-                {/* Profile CTA */}
-                <Link
-                  to={`/directory/${biz.id}`}
-                  className="block w-full text-center py-3 bg-primary hover:bg-secondary text-white font-bold text-sm rounded-2xl transition-all shadow-md hover:scale-[1.02] transform"
-                >
-                  View Profile
-                </Link>
+                <div>
+                  {/* Partner Badge */}
+                  <div className="mb-3">
+                    <span className="text-primary dark:text-blue-300 font-extrabold text-[9px] bg-primary/10 dark:bg-primary/20 px-2 py-0.5 rounded">
+                      Partner
+                    </span>
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-200/50 dark:border-slate-800/60 flex items-center justify-between">
+                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider line-clamp-1 max-w-[130px]">
+                       {biz.industry}
+                     </span>
+                     <Link
+                        to={`/directory/${biz.id}`}
+                        className="px-4 py-2 bg-primary hover:bg-secondary text-white font-bold text-xs rounded-xl transition-all shadow-md hover:scale-[1.02] transform whitespace-nowrap"
+                      >
+                        View Profile
+                      </Link>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

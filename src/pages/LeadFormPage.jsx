@@ -111,18 +111,18 @@ export const LeadFormPage = () => {
   return (
     <div className="space-y-8 py-16 pb-24 max-w-3xl mx-auto px-4 sm:px-6 text-left">
       
-      {/* Back button */}
-      <Link 
-        to="/" 
-        className="inline-flex items-center gap-1 text-sm font-bold text-slate-500 hover:text-secondary transition-colors"
-      >
-        <ArrowLeft size={12} /> Back to Home
-      </Link>
-
       <div className="p-8 rounded-3xl glass-card border border-slate-200/50 dark:border-slate-800/40 space-y-6 relative overflow-hidden shadow-lg">
         
         {/* Banner graphic */}
         <div className="absolute top-0 left-0 w-full h-[4px] bg-secondary" />
+
+        {/* Back button */}
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-1 text-sm font-bold text-slate-500 hover:text-secondary transition-colors mb-2"
+        >
+          <ArrowLeft size={12} /> Back to Home
+        </Link>
 
         {/* Title */}
         <div className="flex items-center gap-3 border-b border-slate-150 dark:border-slate-800/80 pb-6">
