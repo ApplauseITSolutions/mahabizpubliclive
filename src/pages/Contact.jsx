@@ -133,7 +133,7 @@ export const Contact = () => {
           </div>
 
           {/* Quick Action buttons */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <a
               href="tel:+912245901200"
               className="flex items-center justify-center gap-2 p-4 bg-primary text-white rounded-2xl font-bold text-sm shadow-md hover:bg-primary-dark transition-all"

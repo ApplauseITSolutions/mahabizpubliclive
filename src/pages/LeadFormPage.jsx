@@ -259,7 +259,7 @@ export const LeadFormPage = () => {
             )}
 
             {formType === 'get-featured' && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200/50 dark:border-slate-800/40">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200/50 dark:border-slate-800/40">
                 
                 <div className="space-y-1.5 text-sm">
                   <label className="font-extrabold text-slate-450 uppercase tracking-widest">Business Category</label>

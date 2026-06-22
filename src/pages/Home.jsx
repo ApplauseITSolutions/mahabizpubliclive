@@ -127,7 +127,7 @@ export const Home = () => {
         <div className="absolute top-1/4 left-10 w-72 h-72 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl z-[1]" />
         <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-secondary/5 dark:bg-secondary/15 rounded-full blur-3xl z-[1]" />
 
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-12 items-center relative z-10">
 
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
@@ -135,7 +135,7 @@ export const Home = () => {
               <Zap size={14} className="text-secondary shrink-0 drop-shadow-sm" /> Maharashtra's Leading Business Ecosystem
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white font-sora break-words">
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.15] text-slate-900 dark:text-white font-sora break-words">
               Connecting Maharashtra's <span className="text-gradient">Businesses</span> with Opportunities
             </h1>
 
@@ -143,7 +143,7 @@ export const Home = () => {
               Helping startups, MSMEs, small businesses, and manufacturers gain global visibility, generate verified leads, build strategic networks, and accelerate revenue growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
               <Link
                 to="/apply/become-member"
                 className="w-full sm:w-auto px-4 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-primary to-primary-light hover:from-secondary hover:to-secondary-light transition-all shadow-md sm:shadow-lg shadow-primary/20 hover:shadow-secondary/25 hover:scale-[1.03] transform text-center whitespace-nowrap"
@@ -245,7 +245,7 @@ export const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
               { title: "More Visibility", text: "Rank higher on Google searches and get highlighted inside regional directories.", icon: <Eye className="w-5 h-5" /> },
               { title: "More Customers", text: "Secure warm lead referrals directly matched to your industry sector and capacity.", icon: <UserPlus className="w-5 h-5" /> },
