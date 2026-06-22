@@ -65,6 +65,16 @@ const AnimatedCounter = ({ value, label, suffix = '' }) => {
   )
 }
 
+const getBusinessImage = (id) => {
+  const images = {
+    'biz-1': 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600&h=400',
+    'biz-2': 'https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?auto=format&fit=crop&q=80&w=600&h=400',
+    'biz-5': 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600&h=400',
+    'biz-6': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600&h=400',
+  };
+  return images[id] || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600&h=400';
+}
+
 export const Home = () => {
   const { businesses, events } = useAppStore()
   const featuredBusinesses = businesses.filter(b => b.featured)
@@ -321,7 +331,7 @@ export const Home = () => {
               <div className="w-full h-40 relative overflow-hidden shrink-0">
                 <div className={`absolute inset-0 bg-gradient-to-tr ${biz.logoColor || 'from-slate-400 to-slate-600'} opacity-40 z-10 mix-blend-multiply`} />
                 <img 
-                  src={`https://picsum.photos/seed/${biz.id}/400/300`} 
+                  src={getBusinessImage(biz.id)} 
                   alt={biz.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
